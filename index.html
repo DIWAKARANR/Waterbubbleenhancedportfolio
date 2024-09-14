@@ -1,0 +1,346 @@
+``html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Enhanced Portfolio</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            background:#ffff00;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 1s ease-in-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #ff0066;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .card {
+            background: #66ff33;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s, border-color 0.3s;
+            border: 2px solid transparent;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            border-color: #ff33cc;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #ff33cc;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color:#ff0000 ;
+            text-decoration: none;
+        }
+        footer {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+            overflow: hidden;
+        }
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Glitter falling effect */
+        #glitter {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        /* Glitter dust effect */
+        .glitter-dust {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+            animation: glitter-dust-animation 4s forwards;
+            width : 50px;
+            height : 50px;
+        }
+        @keyframes glitter-dust-animation {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+        @keyframes glitter-blink {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Enhanced Portfolio</h1>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="https://i.postimg.cc/WthCqsyL/IMG-20240730-192123.jpg" alt="Diwakaran R">
+            <p>Hi, I'm Diwakaran R, a passionate web developer with a love for creating magical web experiences. I am a BCA student skilled in HTML, CSS, JavaScript, React, AI, ML, MS Excel, Python, and Java. I have completed four internships, earned verified badges from Cisco, Microsoft, IBM, and Google, and hold a strong CGPA of 8.5. Dedicated to contributing my innovation and knowledge, I have also participated in various workshops such as NLP, mobile application development, and mastering ChatGPT.</p>
+        </section>
+        <section id="internships">
+            <h2>Internships</h2>
+            <div class="card">
+                <h2>Internship 1 - CODSOFT</h2>
+                <p>I completed a one-month virtual web development internship at CODSOFT, where I successfully built three projects: a crescent-shaped calculator, a portfolio website, and a dynamic landing page. This internship enhanced my web development skills and allowed me to apply my knowledge in practical projects.</p>
+            </div>
+            <div class="card">
+                <h2>Internship 2 - YBI Foundation</h2>
+                <p>I completed a one-month Artificial Intelligence and Machine Learning internship at YBI Foundation, where I worked on two key projects: Financial Market News Sentiment Analysis and Handwritten Digit Prediction. This experience deepened my knowledge in AI and ML and allowed me to apply my skills to real-world problems.</p>
+            </div>
+            <div class="card">
+                <h2>Internship 3 - Prodigy Infotech</h2>
+                <p>I completed a one-month virtual web development internship at Prodigy Infotech, where I developed four projects: a landing page, a portfolio website, a Tic-Tac-Toe application, and a stopwatch application. This internship helped me refine my web development skills and gain hands-on experience with various projects.</p>
+            </div>
+            <div class="card">
+                <h2>Internship 4 - Technohacks EduTech</h2>
+                <p>I completed a one-month web development internship at Technohacks EduTech, where I created four projects: a login form, a registration form, a countdown timer, and a currency converter. This internship provided valuable experience in developing functional web applications.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card">
+                <h2>Rainy Background Portfolio</h2>
+                <img src="project1.jpg" alt="Rainy Background Portfolio">
+                <p>A unique portfolio website featuring a mesmerizing rainy background effect, showcasing my web development skills and creative design abilities.</p>
+                <a href="https://diwakaranr.github.io/Rainy-background-portfolio-/">View Demo</a>
+            </div>
+            <div class="card">
+                <h2>Tic Tac Toe Application</h2>
+                <img src="project2.jpg" alt="Tic Tac Toe Application">
+                <p>An interactive Tic Tac Toe game with both 1vs1 and 1vs computer modes, demonstrating my JavaScript programming and game logic implementation skills.</p>
+                <a href="https://diwakaranr.github.io/Tic-tac-Toe-application-with-both-1-vs-1-and-1-vs-computer-/">View Demo</a>
+            </div>
+            <div class="card">
+                <h2>Enhanced Animated Dodecagram Clock</h2>
+                <img src="project3.jpg" alt="Enhanced Animated Dodecagram Clock">
+                <p>A visually stunning clock design featuring a dodecagram shape with smooth animations, showcasing my creativity in UI design and JavaScript animations.</p>
+                <a href="https://diwakaranr.github.io/Enhanced-animated-dodecagram-clock/">View Demo</a>
+            </div>
+            <div class="card">
+                <h2>Interactive Calendar</h2>
+                <img src="project4.jpg" alt="Interactive Calendar">
+                <p>A fully functional and interactive calendar application, demonstrating my skills in date manipulation and user interface design using JavaScript.</p>
+                <a href="https://diwakaranr.github.io/Calendar-/">View Demo</a>
+            </div>
+            <div class="card">
+                <h2>To-Do List with Snowfall Effects</h2>
+                <img src="project5.jpg" alt="To-Do List with Snowfall Effects">
+                <p>A feature-rich to-do list application with a charming snowfall animation, showcasing my ability to combine functionality with aesthetic design.</p>
+                <a href="https://diwakaranr.github.io/To-do-list-with-simple-snowfall-effects-/">View Demo</a>
+            </div>
+            <div class="card">
+                <h2>Rock Paper Scissors Game</h2>
+                <img src="project6.jpg" alt="Rock Paper Scissors Game">
+                <p>An engaging implementation of the classic Rock Paper Scissors game, demonstrating my skills in game logic and interactive web application development.</p>
+                <a href="https://diwakaranr.github.io/Rock-paper-scissors-game/">View Demo</a>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <p>© Diwakaran R 2024 My Enhanced Portfolio | <a href="mailto:diwakaranrukmangathan@gmail.com">Click Here To Email Me</a></p>
+    </footer>
+    <!-- Add this new section for falling glitter -->
+    <div id="glitter"></div>
+
+    <!-- Include particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Initialize particles.js for falling glitter effect
+        particlesJS('glitter', {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00ffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#00ffff "
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 8,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 6,
+                        "size_min": 1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "bottom",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Function to create glitter dust effect with multiple colors
+        function createGlitterDust(x, y) {
+            const colors = ['#ff6f61', '#ffccbc', '#ffab91', '#ff8a80'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const dust = document.createElement('div');
+            dust.className = 'glitter-dust';
+            dust.style.width = '30px'; // Increased size
+            dust.style.height = '30px'; // Increased size
+            dust.style.left = `${x - 15}px`; // Adjusted for increased size
+            dust.style.top = `${y - 15}px`; // Adjusted for increased size
+            dust.style.backgroundColor = color;
+            document.body.appendChild(dust);
+
+            // Remove dust element after animation
+            dust.addEventListener('animationend', () => {
+                dust.remove();
+            });
+        }
+
+        // Add event listeners for drawing/writing with glitter dust
+        document.addEventListener('mousemove', (e) => {
+            if (e.buttons === 1) { // Check if mouse is pressed
+                createGlitterDust(e.pageX, e.pageY);
+            }
+        });
+
+        // Function to change footer background colors
+        function changeFooterColors() {
+            const footer = document.querySelector('footer');
+            const colors = ['#009900','#ff9900','#990099','#ff3385','#cc0000'];
+            let colorIndex = 0;
+
+            setInterval(() => {
+                footer.style.backgroundColor = colors[colorIndex];
+                colorIndex = (colorIndex + 1) % colors.length;
+            }, 3000); // Change color every 3 seconds
+        }
+
+        changeFooterColors();
+    </script>
+</body>
+</html>
